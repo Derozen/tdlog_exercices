@@ -55,11 +55,4 @@ def processLines(lines) -> str:
     else : 
         return "KO",backlog
 
-with open(r"C:\Users\manba\OneDrive\Documents\GitHub\tdlog_exercices\exo3\sample\input1.txt", 'r') as f:
-    lines_1 = f.readlines()
-    f.close()
-with open(r"C:\Users\manba\OneDrive\Documents\GitHub\tdlog_exercices\exo3\sample\input1.txt", 'r') as f:
-    lines_2 = f.readlines()
-    f.close()
 
-print(processLines(lines_2))
