@@ -39,5 +39,24 @@ La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 
 
 def processLines(lines) -> str:
-    # Implementer votre réponse ici
-    return "OK"
+    backlog = int(lines[1])
+    T = int(lines[0])
+    for i in range(2,T+2):
+
+        [v,u] = lines[i].split(' ')
+        v = int(v)
+        u = u.replace("\n",'')
+        u = int(u)
+        backlog = backlog - v
+        backlog = backlog + u
+  
+    if backlog ==0:
+        return "OK",backlog
+    else : 
+        return "KO",backlog
+
+with open(r"C:\Users\manba\OneDrive\Documents\GitHub\tdlog_exercices\exo3\sample\input1.txt", 'r') as f:
+    lines = f.readlines()
+    f.close()
+
+print(processLines(lines))
