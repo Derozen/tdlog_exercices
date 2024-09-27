@@ -45,7 +45,7 @@ def processLines(lines) -> str:
 
         [v,u] = lines[i].split(' ')
         v = int(v)
-        u = u.replace("\n",'')
+        u = u.replace("\n",'') #convertir string en entier
         u = int(u)
         backlog = backlog - v
         backlog = backlog + u
